@@ -199,6 +199,7 @@ header nav {
 
 /* estilos titulo presentacion y parrafo */
 .texto_presentacion {
+    margin-left: 3vw;
     background-color: rgba(5, 5, 5, 0.2);
     border-radius: 5% 0 0 5%;
 }
@@ -223,7 +224,7 @@ header nav {
 }
 
 .elemento_galeria > img {
-    width: 31.9vw;
+    width: 34.5vw;
     z-index: 0;
     animation-duration: 8s;
     animation-timing-function: cubic-bezier(0.5,0.5,0.5,0.5);
