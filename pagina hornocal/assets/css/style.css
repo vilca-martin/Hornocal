@@ -1,0 +1,391 @@
+/* configuraciones generales de la pagina */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    z-index: -3;
+}
+
+main {
+    position: relative;
+    z-index: -2;
+}
+
+/* estilo contenedor general del encabezado */
+
+header {
+    width: 100%;
+    height: 125px;
+    background-image: url('/pagina hornocal/assets/images/HornocalComprimida.jpeg');
+    background-position: center;
+}
+
+/* estilos contenerdor de las partes el encabezado */
+
+header nav {
+    display: grid;
+    grid-template-columns: 400px 450px;
+    grid-template-rows: 125px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* elementos primera seccion */
+
+.imagen_nombre {
+    align-content: center;
+}
+
+/* logo pagina */
+
+.elemento_encabezado > img {
+    width: 75px;
+    display: inline;
+}
+
+/* titulo pagina */
+
+.elemento_encabezado > h1 {
+    font-size: 40px;
+    display: inline;
+}
+
+/* seccion navegacion */
+
+.menu_navegacion {
+    padding-top: 25px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto) 175px;
+    grid-template-rows: 10%;
+    align-content: center;
+    list-style: none;
+}
+
+/*estilos letra */
+
+.menu_navegacion > .elemento_menu > a {
+    font-size: 24px;
+    color: black;
+}
+
+/* estilos carrito */
+
+.elemento_menu > .carrito {
+    display: inline-block;
+    width: 25px;
+}
+
+.carrito > img {
+    width: 100%;
+}
+
+/* estilos busqueda */
+
+.buscador > input {
+    position: absolute;
+    border-style: none;
+    border-radius: 4px;
+    padding:2px 0;
+}
+
+.buscador > .boton {
+    position: absolute;
+    margin-left: 149px;
+    width: 20px;
+    height: 20px;
+}
+
+.boton > img {
+    width: 100%;
+}
+
+/* boton el menu hamburguesa */
+
+.boton_menu {
+    display: none;
+}
+
+.elemento_encabezado > .boton_menu >img {
+    width: 50px;
+}
+
+@media only screen and (max-width: 850px) {
+
+    /* estilos contenerdor de las partes el encabezado */
+
+    header nav {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 125px;
+    }
+
+    /* tamaño contenedor menu */
+
+    .menu_opciones {
+        width: 120px;
+    }
+    
+    /* seccion navegacion */
+    
+    .menu_navegacion {
+        margin-top: 125px;
+        padding-bottom: 21px;
+        width: 120px;
+        display: none;
+        background-color: rgb(203, 253, 253);
+        border-radius: 0 0 5px 5px;
+        
+    }
+    .menu_navegacion > .elemento_menu {
+        display: block;
+        width: 120px;
+    }
+
+    .elemento_menu > a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .carrito > img {
+        margin-left: 47.5px;
+    }
+
+    .buscador > input {
+        width: 110px;
+    }
+
+    .buscador > .boton {
+        margin-left: 90px;
+    }
+    /* boton el menu hamburguesa */
+    
+    .boton_menu {
+        position: absolute;
+        height: 110px;
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: end;
+        align-items: center;
+    }    
+}
+
+
+/* estilo cuerpo de la pagina */
+
+
+/* estilo presentación pagina */
+
+.presentacion_pagina {
+    margin-top: 3vw;
+    padding: 3vw 0;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto 45%;
+    background-image: url("/pagina hornocal/assets/images/argentina_comp.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* estilos titulo presentacion y parrafo */
+.texto_presentacion {
+    background-color: rgba(5, 5, 5, 0.2);
+    border-radius: 5% 0 0 5%;
+}
+
+.elemento_presentacion > h2 {
+    font-size: 5vw;
+}
+
+.elemento_presentacion > p {
+    font-size: 1.5vw;
+}
+
+/* estilos imagenes galeria presentacion */
+
+.galeria_imagenes {
+    width: 40vw;
+    height: 100%;
+}
+
+.elemento_galeria {
+    position: absolute;
+}
+
+.elemento_galeria > img {
+    width: 31.9vw;
+    z-index: 0;
+    animation-duration: 8s;
+    animation-timing-function: cubic-bezier(0.5,0.5,0.5,0.5);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 850px) {
+    .elemento_galeria > img {
+        width: 35vw;
+    }
+}
+
+.imagen1 {
+    animation-name: desvanecido1;
+}
+
+.imagen2 {
+    animation-name: desvanecido2;
+}
+
+.imagen3 {
+    animation-name: desvanecido3;
+}
+
+@keyframes desvanecido1 {
+    0% {opacity: 0.5;}
+    25% {opacity: 1;}
+    50% {opacity: 0;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes desvanecido2 {
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes desvanecido3 {
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    50% {opacity: 0;}
+    75% {opacity: 1;}
+    100% {opacity: 0.5;}
+}
+
+/* estilos tarjetas tours */
+
+.contenedor_tarjetas {
+    margin-top: 4.5vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+}
+
+.tarjeta {
+    width: 30vw;
+    height: 17vw;
+    position: relative;
+    color: rgba(237, 149, 106, 0);
+}
+
+.imagen_tarjeta, .texto_tarjeta {
+    position: absolute;
+    width: 30vw;
+    height: 100%;
+}
+
+.imagen_tarjeta > img {
+    width: 100%;
+}
+
+.texto_tarjeta > h3 {
+    margin: 5px;
+    font-size: 2.5vw;
+}
+
+.texto_tarjeta > p {
+    margin: 5px;
+    font-size: 1.5vw;
+}
+
+.texto_tarjeta:hover {
+    animation: trasparencia_gradual 0.4s ease-in 0s 1 normal forwards;
+}
+
+@keyframes trasparencia_gradual {
+    0% {
+        color: rgba(237, 149, 106, 0);
+        background-color: rgba(5, 5, 5, 0);
+    }
+    100% {
+        color: rgba(237, 149, 106, 1);
+        background-color: rgba(5, 5, 5, 0.5);
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    .contenedor_tarjetas {
+        grid-template-columns: auto auto;
+    }
+
+    .tarjeta {
+        width: 45vw;
+        margin-bottom: 11vw;
+        color: rgba(237, 149, 106, 1);
+    }
+
+    .imagen_tarjeta, .texto_tarjeta {
+        width: 45vw;
+    }
+
+    .texto_tarjeta {
+        background-color: rgba(5, 5, 5, 0.5)
+    }
+
+    .texto_tarjeta > h3 {
+        font-size: 3vw;
+    }
+
+    .texto_tarjeta > p {
+        font-size: 2.2vw;
+    }
+}
+
+/* estilos enlaces fijos */
+
+.contenedor_enlace_fijo {
+    position: fixed;
+    display: grid;
+    z-index: 2;
+    margin: 60vh 0 0 90vw;
+    justify-content: end;
+}
+.enlace_fijo {
+    width: 10vh;
+}
+
+.enlace_fijo > img {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+}
+
+.fondo_whatsapp {
+    position: absolute;
+    z-index: 3;
+    width: 9.6vh;
+    height: 9.6vh;
+    margin-left: 1.9px;
+    margin-top: 0.5px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 450px) {
+    
+    .contenedor_enlace_fijo {
+        margin: 60vh 0 0 82.5vw;
+    }
+}
