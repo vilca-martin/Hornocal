@@ -20,6 +20,7 @@ main {
 /* estilo contenedor general del encabezado */
 
 header {
+    position: fixed;
     width: 100%;
     height: 125px;
     background-image: url('/assets/images/HornocalComprimida.jpeg');
@@ -183,8 +184,7 @@ header nav {
 /* estilo presentación pagina */
 
 .presentacion_pagina {
-    margin-top: 3vw;
-    padding: 3vw 0;
+    padding: 15vw 0 3vw 0;
     width: 100%;
     position: relative;
     z-index: -1;
@@ -235,6 +235,11 @@ header nav {
 }
 
 @media only screen and (max-width: 850px) {
+
+    .presentacion_pagina {
+        padding-top: 27.5vw;
+    }
+
     .elemento_galeria > img {
         width: 35vw;
     }
@@ -361,7 +366,7 @@ header nav {
     position: fixed;
     display: grid;
     z-index: 2;
-    margin: 60vh 0 0 90vw;
+    margin: 87vh 0 0 87vw;
     justify-content: end;
 }
 .enlace_fijo {
@@ -384,9 +389,16 @@ header nav {
     border-radius: 50%;
 }
 
+@media only screen and (max-width: 850px) {
+
+    .contenedor_enlace_fijo {
+        margin: 87vh 0 0 80vw;
+    }
+}
+
 @media only screen and (max-width: 450px) {
     
     .contenedor_enlace_fijo {
-        margin: 60vh 0 0 82.5vw;
+        margin: 85vh 0 0 75vw;
     }
 }
