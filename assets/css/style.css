@@ -22,7 +22,7 @@ main {
 header {
     width: 100%;
     height: 125px;
-    background-image: url('/pagina hornocal/assets/images/HornocalComprimida.jpeg');
+    background-image: url('/assets/images/HornocalComprimida.jpeg');
     background-position: center;
 }
 
@@ -191,7 +191,7 @@ header nav {
     display: grid;
     justify-items: center;
     grid-template-columns: auto 45%;
-    background-image: url("/pagina hornocal/assets/images/argentina_comp.jpg");
+    background-image: url("/assets/images/argentina_comp.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
