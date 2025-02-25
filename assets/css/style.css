@@ -391,6 +391,10 @@ header nav {
 
 @media only screen and (max-width: 850px) {
 
+    .fondo_whatsapp {
+        background-color: rgb(12, 193, 67);
+    }
+
     .contenedor_enlace_fijo {
         margin: 87vh 0 0 80vw;
     }
