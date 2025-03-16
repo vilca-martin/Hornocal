@@ -22,9 +22,9 @@ function redimensionado() {
     }
 };
 
-menuAmburguesa.addEventListener("resize", redimensionado);
-
 botonMenu.addEventListener("click", interaccionBoton, false);
+
+window.addEventListener("resize", redimensionado);
 
 var enlaceWhatsapp = document.querySelector(".whatsapp");
 var fondoWhatsapp = document.querySelector(".fondo_whatsapp");
