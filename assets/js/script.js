@@ -26,12 +26,12 @@ botonMenu.addEventListener("click", interaccionBoton, false);
 
 window.addEventListener("resize", redimensionado);
 
-var enlaceWhatsapp = document.querySelector(".whatsapp");
+var enlaceWhatsapp = document.querySelector(".logo_whatsapp");
 var fondoWhatsapp = document.querySelector(".fondo_whatsapp");
 
 function cambioFondoWhatsapp(evento) {
     if (evento.type == 'mouseover') {
-        fondoWhatsapp.style.backgroundColor = "rgb(12, 193, 67)";
+        fondoWhatsapp.style.backgroundColor = "rgb(46, 212, 108)";
     }
     
     if (evento.type == 'mouseout') {

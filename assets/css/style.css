@@ -29,6 +29,7 @@ header {
 /* estilos contenerdor de las partes el encabezado */
 
 header nav {
+    position: sticky;
     display: grid;
     grid-template-columns: 400px 450px;
     grid-template-rows: 125px;
@@ -184,9 +185,12 @@ header nav {
 
 .presentacion_pagina {
     width: 100%;
+    height: 50vh;
+    padding: 2.5vw 0;
     position: relative;
     z-index: -1;
     display: grid;
+    align-items: center;
     justify-items: center;
     grid-template-columns: auto 45%;
     background-image: url("../images/argentina_comp.jpg");
@@ -214,8 +218,8 @@ header nav {
 /* estilos imagenes galeria presentacion */
 
 .galeria_imagenes {
-    width: 40vw;
-    height: 100%;
+    width: 80%;
+    height: 95%;
 }
 
 .elemento_galeria {
@@ -223,7 +227,8 @@ header nav {
 }
 
 .elemento_galeria > img {
-    width: 34.5vw;
+    position: relative;
+    width: 70vh;
     z-index: 0;
     animation-duration: 8s;
     animation-timing-function: cubic-bezier(0.5,0.5,0.5,0.5);
@@ -235,14 +240,52 @@ header nav {
 
 @media only screen and (max-width: 850px) {
 
+    .presentacion_pagina {
+        align-items: center;
+        height: 30vh;
+    }
+
+    .galeria_imagenes {
+        width: 100%;
+        height: 70%;
+    }
+
     .elemento_galeria > img {
         width: 40vw;
+    }
+
+    .elemento_presentacion > h2 {
+        font-size: 6vw;
+    }
+    
+    .elemento_presentacion > p {
+        font-size: 1.75vw;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    .elemento_galeria > img {
-        width: 30vw;
+
+    .presentacion_pagina {
+        height: 20vh;
+    }
+
+    .galeria_imagenes {
+        height: 67.5%;
+    }
+
+    .elemento_presentacion > p {
+        font-size: 1.74vw;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    .presentacion_pagina {
+        height: 15vh;
+    }
+
+    .galeria_imagenes {
+        height: 72.5%;
     }
 }
 
@@ -342,20 +385,22 @@ header nav {
 @media only screen and (max-width: 850px) {
 
     .contenedor_tarjetas {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
     }
 
     .tarjeta {
-        width: 45vw;
-        margin-bottom: 11vw;
+        width: 80vw;
+        height: 85%;
+        margin-bottom: 45vw;
     }
 
     .imagen_tarjeta, .texto_tarjeta {
-        width: 45vw;
+        width: 75vw;
     }
 
     .texto_tarjeta {
-        background-color: rgba(5, 5, 5, 0.5)
+        height: 100%;
+        background-color: rgba(5, 5, 5, 0.4)
     }
 
     .tarjeta > button {
@@ -363,11 +408,11 @@ header nav {
     }
 
     .texto_tarjeta > h3 {
-        font-size: 3vw;
+        font-size: 6vw;
     }
 
     .texto_tarjeta > p {
-        font-size: 2.2vw;
+        font-size: 3.75vw;
     }
 }
 
@@ -379,45 +424,44 @@ header nav {
 
 .contenedor_enlace_fijo {
     position: fixed;
-    display: grid;
+    width: 0;
+    height: 0;
     z-index: 2;
-    margin: 87vh 0 0 87vw;
-    justify-content: end;
-}
-.enlace_fijo {
-    width: 10vh;
 }
 
-.enlace_fijo > img {
-    position: relative;
-    z-index: 4;
-    width: 100%;
+.enlace_fijo {
+    display: block;
+    margin-top: 65vh;
+    margin-left: 92.5vw;
+    width: 9vh;
+    height: 9vh;
 }
 
 .fondo_whatsapp {
     position: absolute;
-    z-index: 3;
-    width: 9.6vh;
-    height: 9.6vh;
-    margin-left: 1.9px;
-    margin-top: 0.5px;
-    border-radius: 50%;
+    
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 8.25vh;
+    height: 8.25vh;
+    border-radius: 55%;
+}
+
+.logo_whatsapp {
+    position: absolute;
+    height: 9vh;
 }
 
 @media only screen and (max-width: 850px) {
 
     .fondo_whatsapp {
-        background-color: rgb(12, 193, 67);
-    }
-
-    .contenedor_enlace_fijo {
-        margin: 87vh 0 0 80vw;
+        background-color: rgb(46, 212, 108);
     }
 }
 
 @media only screen and (max-width: 450px) {
-    
-    .contenedor_enlace_fijo {
-        margin: 85vh 0 0 75vw;
+
+    .enlace_fijo {
+        margin-left: 80vw;
     }
 }
